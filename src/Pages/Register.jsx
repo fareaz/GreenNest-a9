@@ -87,7 +87,7 @@ const Register = () => {
                                 </div>
                               
                                 
-                                <button className="btn btn-neutral mt-4">Register</button>
+                                <button className="btn mt-3 bg-green-500 text-white/70">Register</button>
                             </fieldset>
                             {/* {
                                 success && <p className='text-green-500'>Account created successfully. </p>

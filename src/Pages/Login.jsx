@@ -79,7 +79,19 @@ const Login = () => {
                 {/* <a className="link link-hover" onClick={handleForgetPassword}>Forgot password?</a> */}
                 <a className="link link-hover">Forgot password?</a>
               </div>
-              <button className="btn btn-neutral mt-3">Login</button>
+              <button className="btn mt-3 bg-green-500 text-white/70">Login</button>
+              <button
+                type="button"
+                // onClick={handleGoogleSignin}
+                className="flex items-center border justify-center gap-3 bg-white text-gray-800 px-5 py-2 btn w-full font-semibold hover:bg-gray-100 transition-colors cursor-pointer my-2"
+              >
+                <img
+                  src="https://www.svgrepo.com/show/475656/google-color.svg"
+                  alt="google"
+                  className="w-5 h-5"
+                />
+                Continue with Google
+              </button>
             </fieldset>
             <p>
             New to our Website? Please{" "}
