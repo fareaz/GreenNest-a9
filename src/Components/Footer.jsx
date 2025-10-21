@@ -4,7 +4,7 @@ import { Link } from  'react-router';
 
 const Footer = () => {
   return (
-    <footer className="bg-green-600 text-white py-8 mt-10">
+    <footer className="bg-green-600 text-white py-8 ">
       <div className="w-11/12 mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="flex flex-col items-center md:items-start gap-2">
           <h3 className="text-lg font-semibold">Quick Links</h3>

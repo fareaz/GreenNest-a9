@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 
-
+import PlantCard from "./PlantCard";
 import { Link } from "react-router";
-import PlantCard from "../Components/PlantCard";
 
-const Plants = () => {
+const HomePlants = () => {
   const [plants, setPlants] = useState([]);
 
   useEffect(() => {
@@ -16,7 +15,7 @@ const Plants = () => {
 
   return (
     <section className="mx-auto w-11/12  p-4">
-      <h2 className="text-2xl font-semibold mb-4 text-emerald-800 text-center">
+      <h2 className="text-2xl font-semibold mb-4 text-emerald-800">
         Our Plant Collection
       </h2>
 
@@ -25,8 +24,16 @@ const Plants = () => {
          <PlantCard key={p.plantId} p={p}></PlantCard>
         ))}
       </div>
+       <div className="text-right mt-3 mr-3">
+      <Link
+        to="/plants"
+        className="inline-block text-green-500 font-semibold hover:text-green-900"
+      >
+        See All
+      </Link>
+    </div>
     </section>
   );
 };
 
-export default Plants;
+export default HomePlants;

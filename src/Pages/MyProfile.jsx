@@ -1,6 +1,7 @@
 // import React, { useContext, useState } from "react";
 // import { AuthContext } from "../Provider/AuthProvider";
 // import { updateProfile } from "firebase/auth";
+import UserLogo from "../assets/user.png"
 
 const MyProfile = () => {
 // //   const { user, setUser } = useContext(AuthContext);
@@ -27,12 +28,13 @@ const MyProfile = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <div className="bg-white shadow-lg rounded-2xl p-8 w-full max-w-md">
+      <div className="bg-white shadow-lg rounded-2xl p-8 w-10/12 md:flex justify-between ">
         <div className="flex flex-col items-center">
           <img
             // src={user?.photoURL || "https://via.placeholder.com/100"}
-            alt="User Avatar"
-            className="w-24 h-24 rounded-full mb-4 border-2 border-blue-500"
+            src={UserLogo}
+            alt=""
+            className="w-24 h-24 rounded-full mb-4 border-2 border-green-500"
           />
           <h2 className="text-2xl font-semibold text-gray-800 mb-1">
             {/* {user?.displayName || "No Name"} */} name
@@ -47,22 +49,22 @@ const MyProfile = () => {
           </h3>
           <input
             type="text"
-            // value={name}
+            value={name}
             // onChange={(e) => setName(e.target.value)}
             placeholder="New display name"
-            className="w-full border rounded-lg px-3 py-2 mb-3 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="w-full border rounded-lg px-3 py-2 mb-3 focus:outline-none focus:ring-2 focus:ring-green-400"
           />
           <input
             type="text"
             // value={photo}
             // onChange={(e) => setPhoto(e.target.value)}
             placeholder="New photo URL"
-            className="w-full border rounded-lg px-3 py-2 mb-3 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="w-full border rounded-lg px-3 py-2 mb-3 focus:outline-none focus:ring-2 focus:ring-green-400"
           />
 
           <button
             // onClick={handleUpdate}
-            className="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-lg transition-all"
+            className="w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg transition-all"
           >
             Update Profile
           </button>

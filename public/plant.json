@@ -1,0 +1,75 @@
+[
+  {
+    "plantId": 1,
+    "plantName": "Snake Plant",
+    "category": "Air Purifier",
+    "price": 18,
+    "rating": 4.8,
+    "availableStock": 10,
+    "careLevel": "Easy",
+    "description": "A hardy plant that purifies indoor air and thrives in low light.",
+    "image": "https://i.ibb.co.com/zW6sf812/spathiphyllum-in-foreground.jpg",
+
+    "providerName": "UrbanGreen Studio"
+  },
+  {
+    "plantId": 2,
+    "plantName": "Peace Lily",
+    "category": "Flowering Indoor",
+    "price": 22,
+    "rating": 4.6,
+    "availableStock": 8,
+    "careLevel": "Moderate",
+    "description": "A graceful indoor plant with white blooms that thrive in medium light and humid conditions.",
+    "image": "https://i.ibb.co.com/tT5NvXLZ/Snake-Plant-1-f6204179-d92b-40e3-bec7-0d3a61e93b81.webp",
+    "providerName": "Leaf & Bloom Co."
+  },
+  {
+    "plantId": 3,
+    "plantName": "Aloe Vera",
+    "category": "Succulent",
+    "price": 15,
+    "rating": 4.9,
+    "availableStock": 12,
+    "careLevel": "Easy",
+    "description": "A medicinal succulent known for its gel-filled leaves that require minimal watering.",
+    "image": "https://i.ibb.co.com/bg7QGMWf/download-3.jpg",
+    "providerName": "UrbanGreen Studio"
+  },
+  {
+    "plantId": 4,
+    "plantName": "Monstera Deliciosa",
+    "category": "Tropical",
+    "price": 30,
+    "rating": 4.7,
+    "availableStock": 6,
+    "careLevel": "Moderate",
+    "description": "A statement plant with large, split leaves that adds a jungle vibe to any space.",
+    "image": "https://i.ibb.co.com/HTp5mLr5/images-3.jpg",
+    "providerName": "NatureNook Plants"
+  },
+  {
+    "plantId": 5,
+    "plantName": "Spider Plant",
+    "category": "Air Purifier",
+    "price": 16,
+    "rating": 4.5,
+    "availableStock": 15,
+    "careLevel": "Easy",
+    "description": "A resilient plant with striped green leaves that helps remove indoor toxins.",
+    "image": "https://i.ibb.co.com/CKwmv8SR/download-4.jpg",
+    "providerName": "GreenScape Nursery"
+  },
+  {
+    "plantId": 6,
+    "plantName": "Rubber Plant",
+    "category": "Indoor Tree",
+    "price": 28,
+    "rating": 4.7,
+    "availableStock": 9,
+    "careLevel": "Moderate",
+    "description": "An elegant plant with broad glossy leaves that thrives in bright, indirect sunlight.",
+    "image": "https://i.ibb.co.com/60tvZJgQ/download-5.jpg",
+    "providerName": "EcoLeaf Gardeners"
+  }
+]
