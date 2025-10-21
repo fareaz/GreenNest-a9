@@ -59,9 +59,9 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <button className="btn hover:text-black bg-gradient-to-r from-[#16A34A] to-[#4ADE80] text-white font-bold">
+        <Link to={"/auth"} className="btn hover:text-black bg-gradient-to-r from-[#16A34A] to-[#4ADE80] text-white font-bold">
   Log In
-</button>
+</Link>
 
         
       </div>

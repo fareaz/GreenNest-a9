@@ -3,6 +3,7 @@ import Navbar from '../Components/Navbar';
 
 import Loading from '../Components/Loading';
 import { Outlet } from 'react-router';
+import Footer from '../Components/Footer';
 
 const HomeLayout = () => {
     const [isLoading, setIsLoading] = useState(true);
@@ -15,12 +16,12 @@ const HomeLayout = () => {
    
     return (
         <div>
-             <header>
+             <header className='max-w-11/12 mx-auto'>
               <Navbar></Navbar>
             </header>
-            <main>{isLoading ? <Loading /> : <Outlet></Outlet>}</main>
-            <footer>
-
+            <main className='max-w-11/12 mx-auto'>{isLoading ? <Loading /> : <Outlet></Outlet>}</main>
+            <footer className='max-w-11/12 mx-auto'>
+                <Footer></Footer>
             </footer>
         </div>
     );

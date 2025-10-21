@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { Link } from 'react-router';
 
 const Register = () => {
     // const [success, setSuccess] = useState(false);
@@ -53,8 +54,8 @@ const Register = () => {
 
     return (
         <div className="hero bg-base-200 min-h-screen">
-            <div className="hero-content flex-col lg:flex-row-reverse">
-                <div className="text-center lg:text-left">
+            <div className="hero-content flex-col ">
+                <div className="text-center ">
                     <h1 className="text-5xl font-bold">Register now!</h1>
 
                 </div>
@@ -80,19 +81,11 @@ const Register = () => {
                                         className="input" placeholder="Password" />
                                     <button
                                         onClick={handleTogglePasswordShow}
-                                        className="btn btn-xs top-2 right-5 absolute">
+                                        className=" btn-xs border-0 top-4 right-3 absolute">
                                         {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
                                     </button>
                                 </div>
-                                <div>
-                                    <label class="label">
-                                        <input
-                                            type="checkbox"
-                                            name="terms"
-                                            class="checkbox" />
-                                        Accept Our Terms and Conditions
-                                    </label>
-                                </div>
+                              
                                 
                                 <button className="btn btn-neutral mt-4">Register</button>
                             </fieldset>
@@ -103,7 +96,7 @@ const Register = () => {
                                 error && <p className='text-red-500'>{error}</p>
                             } */}
                         </form>
-                        <p>Already have an account? Please <Link className='text-blue-400 underline' to="/login">Login</Link></p>
+                        <p>Already have an account? Please <Link className='text-blue-400 underline' to="/auth">Login</Link></p>
                     </div>
                 </div>
             </div>

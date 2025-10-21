@@ -5,6 +5,11 @@ import MyProfile from "../Pages/MyProfile";
 import HomeLayout from "../layOuts/HomeLayout";
 import ErrorPage from "../Pages/ErrorPage";
 import Loading from "../Components/Loading";
+
+import AuthLayout from "../layOuts/AuthLayout";
+import Login from "../Pages/Login";
+import Register from "../Pages/Register";
+
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -31,18 +36,18 @@ export const router = createBrowserRouter([
   {
     path: "/auth",
     element: <AuthLayout></AuthLayout>,
-    children: [
-      {
-        path: "/auth/login",
-        element: <Login></Login>,
-      },
-      {
-        path: "/auth/register",
-        element: <Register></Register>,
-      },
+    children: [{
+        index: true,
+        path:"/auth",
+        element:<Login></Login>
+    },
+  {
+        path:"/auth/register",
+        element:<Register></Register>
+    },
+      
     ],
   },
- 
   {
      path: "/*",
     element: <ErrorPage></ErrorPage>
