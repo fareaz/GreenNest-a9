@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const Register = () => {
     // const [success, setSuccess] = useState(false);
@@ -95,12 +96,12 @@ const Register = () => {
                                 
                                 <button className="btn btn-neutral mt-4">Register</button>
                             </fieldset>
-                            {
+                            {/* {
                                 success && <p className='text-green-500'>Account created successfully. </p>
                             }
                             {
                                 error && <p className='text-red-500'>{error}</p>
-                            }
+                            } */}
                         </form>
                         <p>Already have an account? Please <Link className='text-blue-400 underline' to="/login">Login</Link></p>
                     </div>
