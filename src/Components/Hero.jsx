@@ -2,8 +2,6 @@ import React, { useEffect, useState, useMemo } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay, Keyboard, A11y, EffectFade } from "swiper/modules";
 import { ChevronLeft, ChevronRight, Leaf } from "lucide-react";
-
-// Swiper CSS
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -12,8 +10,6 @@ import "swiper/css/effect-fade";
 const Hero = () => {
   const [plants, setPlants] = useState([]);
   const [loading, setLoading] = useState(true);
-
-  // public/plants.json থেকে ডেটা লোড
   useEffect(() => {
     fetch("/plant.json")
       .then((res) => res.json())

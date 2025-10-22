@@ -7,7 +7,7 @@ const HomePlants = () => {
   const [plants, setPlants] = useState([]);
 
   useEffect(() => {
-    fetch("/plant.json") 
+    fetch("/plant.json")
       .then((res) => res.json())
       .then((data) => setPlants(data))
       .catch((err) => console.error("Error loading JSON:", err));
@@ -20,18 +20,18 @@ const HomePlants = () => {
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {plants.map((p) => (
-         <PlantCard key={p.plantId} p={p}></PlantCard>
+        {plants.slice(0, 6).map((p) => (
+          <PlantCard key={p.plantId} p={p}></PlantCard>
         ))}
       </div>
-       <div className="text-right mt-3 mr-3">
-      <Link
-        to="/plants"
-        className="inline-block text-green-500 font-semibold hover:text-green-900"
-      >
-        See All
-      </Link>
-    </div>
+      <div className="text-right mt-3 mr-3">
+        <Link
+          to="/plants"
+          className="inline-block text-green-500 font-semibold hover:text-green-900"
+        >
+          See All
+        </Link>
+      </div>
     </section>
   );
 };

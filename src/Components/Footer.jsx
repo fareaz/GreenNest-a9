@@ -4,8 +4,8 @@ import { Link } from  'react-router';
 
 const Footer = () => {
   return (
-    <footer className="bg-green-600 text-white py-8 ">
-      <div className="w-11/12 mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+    <footer className="bg-green-600 text-white py-8  ">
+      <div className="max-w-11/12 mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="flex flex-col items-center md:items-start gap-2">
           <h3 className="text-lg font-semibold">Quick Links</h3>
           <ul className="flex flex-col md:flex-row gap-3 text-sm">
@@ -64,7 +64,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      <div className="w-11/12 mx-auto border-t border-green-400 my-6"></div>
+      <div className="max-w-11/12 mx-auto border-t border-green-400  my-6"></div>
       <p className="text-center text-sm text-green-100">
         © 2025 <span className="font-semibold">GreenNest</span>. All rights reserved.
       </p>

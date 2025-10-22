@@ -1,7 +1,13 @@
 import React from 'react';
 import { FaStar } from 'react-icons/fa';
+import { useNavigate } from 'react-router';
 
 const PlantCard = ({p}) => {
+      const navigate = useNavigate();
+
+  const handleViewDetails = () => {
+     navigate(`/plant_details/${p.plantId}`);
+  };
     return (
           <div
             
@@ -32,6 +38,7 @@ const PlantCard = ({p}) => {
               <span className="ml-2 text-gray-600 text-sm">{p.rating}</span>
             </div>
             <button
+             onClick={handleViewDetails}
               className="mt-4 w-full rounded-lg bg-emerald-600 px-4 py-2 text-white font-medium hover:bg-emerald-700 transition"
             >
               View Details

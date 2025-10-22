@@ -9,6 +9,8 @@ import Loading from "../Components/Loading";
 import AuthLayout from "../layOuts/AuthLayout";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
+import PlantDetails from "../Pages/Plantdetails";
+
 
 export const router = createBrowserRouter([
   {
@@ -44,12 +46,18 @@ export const router = createBrowserRouter([
   {
         path:"/auth/register",
         element:<Register></Register>
-    },
+    }
       
     ],
   },
   {
+    path: "/plant_details/:id",
+    element: <PlantDetails />,
+    // If you decide to use the loader, then switch PlantDetails to useLoaderData
+    // loader: () => fetch("/plant.json"),
+  },
+  {
      path: "/*",
     element: <ErrorPage></ErrorPage>
-  },
+  }
 ]);

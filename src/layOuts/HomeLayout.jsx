@@ -15,12 +15,12 @@ const HomeLayout = () => {
   }, []);
    
     return (
-        <div>
-             <header className='max-w-11/12 mx-auto'>
+        <div className='border '>
+             <header className="max-w-11/12 mx-auto">
               <Navbar></Navbar>
             </header>
-            <main className='max-w-11/12 mx-auto'>{isLoading ? <Loading /> : <Outlet></Outlet>}</main>
-            <footer className='max-w-11/12 mx-auto'>
+            <main className='max-w-11/12 mx-auto '>{isLoading ? <Loading /> : <Outlet></Outlet>}</main>
+            <footer  className="max-w-11/12 mx-auto">
                 <Footer></Footer>
             </footer>
         </div>
