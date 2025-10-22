@@ -39,7 +39,7 @@ const PlantCard = ({p}) => {
             </div>
             <button
              onClick={handleViewDetails}
-              className="mt-4 w-full rounded-lg bg-emerald-600 px-4 py-2 text-white font-medium hover:bg-emerald-700 transition"
+              className=" mt-2 w-full btn hover:text-green-900 bg-gradient-to-r from-[#16A34A] to-[#4ADE80] text-white font-bold"
             >
               View Details
             </button>

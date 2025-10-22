@@ -28,7 +28,7 @@ const MyProfile = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <div className="bg-white shadow-lg rounded-2xl p-8 w-10/12 md:flex justify-between ">
+      <div className=" border border-emerald-200 bg-emerald-50/50 shadow-lg rounded-2xl p-8 w-10/12 md:flex justify-between ">
         <div className="flex flex-col items-center">
           <img
             // src={user?.photoURL || "https://via.placeholder.com/100"}
@@ -43,28 +43,28 @@ const MyProfile = () => {
           <p className="text-gray-500"> "No Email"</p>
         </div>
 
-        <div className="mt-6">
-          <h3 className="text-lg font-medium text-gray-700 mb-2">
+        <div className="mt-6 ">
+          <h3 className="text-lg font-medium  text-emerald-900 mb-2">
             Update Profile
           </h3>
           <input
             type="text"
-            value={name}
+            // value={name}
             // onChange={(e) => setName(e.target.value)}
-            placeholder="New display name"
-            className="w-full border rounded-lg px-3 py-2 mb-3 focus:outline-none focus:ring-2 focus:ring-green-400"
+            placeholder="Update Name"
+            className="mb-3 w-full ext-gray-500  rounded-lg border border-emerald-200 px-3 py-2 outline-none focus:ring-2 focus:ring-emerald-400 text-gray-500 "
           />
           <input
             type="text"
             // value={photo}
             // onChange={(e) => setPhoto(e.target.value)}
-            placeholder="New photo URL"
-            className="w-full border rounded-lg px-3 py-2 mb-3 focus:outline-none focus:ring-2 focus:ring-green-400"
+            placeholder="Update Photo "
+            className="mb-3 w-full ext-gray-500  rounded-lg border border-emerald-200 px-3 py-2 outline-none focus:ring-2 focus:ring-emerald-400 text-gray-500 "
           />
 
           <button
             // onClick={handleUpdate}
-            className="w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded-lg transition-all"
+            className="w-full btn hover:text-green-900 bg-gradient-to-r from-[#16A34A] to-[#4ADE80] text-white font-bold"
           >
             Update Profile
           </button>

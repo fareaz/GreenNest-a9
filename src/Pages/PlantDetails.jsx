@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useParams, useNavigate } from "react-router";
 import Loading from "../Components/Loading";
 import { toast } from "react-toastify";
-import { FaStar } from "react-icons/fa";
+import { FaStar,FaArrowLeft  } from "react-icons/fa";
 
 
 const PlantDetails = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [plant, setPlant] = useState(null);
   const [loading, setLoading] = useState(true);
   const [form, setForm] = useState({ name: "", email: "" });
@@ -66,13 +67,26 @@ const PlantDetails = () => {
      
       <section className="max-w-4xl mx-auto p-6 bg-white rounded-2xl shadow mt-6">
         
-        <div className=" w-full overflow-hidden rounded-xl">
-          <img
-            src={image}
-            alt={plantName}
-            className="w-full h-full object-cover"
-          />
-        </div>
+        
+        <div className="relative w-full overflow-hidden rounded-xl">
+  {/* ✅ Back Button - top left */}
+  <button
+    onClick={() => navigate(-1)}
+    className="absolute top-4 left-4 bg-gradient-to-r from-[#16A34A] to-[#4ADE80] 
+               hover:from-[#15803d] hover:to-[#15803d] text-white 
+               w-9 h-9 flex items-center justify-center rounded-full shadow-lg 
+               transition duration-300"
+    title="Go Back"
+  >
+    <FaArrowLeft size={18} />
+  </button>
+
+  <img
+    src={image}
+    alt={plantName}
+    className="w-full h-full object-cover"
+  />
+</div>
 
         <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="md:col-span-2">
@@ -167,8 +181,8 @@ const PlantDetails = () => {
                     type="text"
                     value={form.name}
                     onChange={handleChange}
-                    className="mt-1 w-full rounded-lg border border-emerald-200 px-3 py-2 outline-none focus:ring-2 focus:ring-emerald-400"
-                    placeholder="Your full name"
+                    className="mt-1 w-full ext-gray-500  rounded-lg border border-emerald-200 px-3 py-2 outline-none focus:ring-2 focus:ring-emerald-400 text-gray-500 "
+                    placeholder="Your Name"
                   />
                 </div>
 
@@ -185,14 +199,14 @@ const PlantDetails = () => {
                     type="email"
                     value={form.email}
                     onChange={handleChange}
-                    className="mt-1 w-full rounded-lg border border-emerald-200 px-3 py-2 outline-none focus:ring-2 focus:ring-emerald-400"
-                    placeholder="you@example.com"
+                    className="mt-1 w-full text-gray-500 rounded-lg border border-emerald-200 px-3 py-2 outline-none focus:ring-2 focus:ring-emerald-400"
+                    placeholder="Enter your Gmail"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2.5 rounded-lg shadow-sm transition"
+                  className="w-full bg-gradient-to-r from-[#16A34A] to-[#4ADE80] text-white font-semibold py-2.5 rounded-lg shadow-sm transition"
                 >
                   Book Now
                 </button>

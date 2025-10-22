@@ -15,14 +15,14 @@ const HomeLayout = () => {
   }, []);
    
     return (
-        <div className='border '>
-             <header className="max-w-11/12 mx-auto">
+        <div className='max-w-7xl mx-auto'>
+            
               <Navbar></Navbar>
-            </header>
-            <main className='max-w-11/12 mx-auto '>{isLoading ? <Loading /> : <Outlet></Outlet>}</main>
-            <footer  className="max-w-11/12 mx-auto">
+     
+          {isLoading ? <Loading /> : <Outlet></Outlet>}
+            
                 <Footer></Footer>
-            </footer>
+          
         </div>
     );
 };

@@ -87,7 +87,7 @@ const Register = () => {
                                 </div>
                               
                                 
-                                <button className="btn mt-3 bg-green-500 text-white/70">Register</button>
+                                <button className=" mt-2 w-full btn hover:text-green-900 bg-gradient-to-r from-[#16A34A] to-[#4ADE80] text-white font-bold">Register</button>
                             </fieldset>
                             {/* {
                                 success && <p className='text-green-500'>Account created successfully. </p>
@@ -96,7 +96,7 @@ const Register = () => {
                                 error && <p className='text-red-500'>{error}</p>
                             } */}
                         </form>
-                        <p>Already have an account? Please <Link className='text-blue-400 underline' to="/auth">Login</Link></p>
+                        <p>Already have an account? Please <Link className='text-green-400 underline' to="/auth">Login</Link></p>
                     </div>
                 </div>
             </div>
