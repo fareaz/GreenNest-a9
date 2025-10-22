@@ -1,7 +1,20 @@
 import React from 'react';
+import { useContext } from 'react';
 import { Link, NavLink } from 'react-router';
+import { AuthContext } from '../Contexts/AuthContext';
+import { toast } from 'react-toastify';
 
 const Navbar = () => {
+   const { user, logOut } = useContext(AuthContext);
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+        toast.success("You Logged Out successfully");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
     const links = 
     <>
       <NavLink to="/" >
@@ -59,9 +72,16 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <Link to={"/auth"} className="btn hover:text-black bg-gradient-to-r from-[#16A34A] to-[#4ADE80] text-white font-bold">
+        {user ? (
+          <button onClick={handleLogOut}className="btn hover:text-black bg-gradient-to-r from-[#16A34A] to-[#4ADE80] text-white font-bold">
+            LogOut
+          </button>
+        ) : (
+          <Link to={"/auth"} className="btn hover:text-black bg-gradient-to-r from-[#16A34A] to-[#4ADE80] text-white font-bold">
   Log In
 </Link>
+        )}
+        
 
         
       </div>
