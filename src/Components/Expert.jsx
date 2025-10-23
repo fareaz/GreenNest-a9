@@ -1,39 +1,12 @@
-import React from "react";
-
-
-const experts = [
-{
-id: 1,
-name: "Sophia Green",
-specialization: "Indoor Plant Specialist",
-image:
-"https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop",
-},
-{
-id: 2,
-name: "Liam Wood",
-specialization: "Soil & Nutrition Expert",
-image:
-"https://images.unsplash.com/photo-1619895862022-09114b41f16f?q=80&w=800&auto=format&fit=crop",
-},
-{
-id: 3,
-name: "Ava Leaf",
-specialization: "Propagation Specialist",
-image:
-"https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=800&auto=format&fit=crop",
-},
-{
-id: 4,
-name: "Noah Bloom",
-specialization: "Pest Control Advisor",
-image:
-"https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?q=80&w=800&auto=format&fit=crop",
-},
-];
-
-
+import React, { useEffect, useState } from "react";
 const Expert = () => {
+     const [experts, setExperts] = useState([]);
+  useEffect(() => {
+    fetch("/Experts.json") 
+      .then((result) => result.json())
+      .then((data) => setExperts(data))
+      .catch((error) => console.error(error));
+  }, []);
 return (
 <section className="w-11/12 mx-auto py-10">
 <h2 className="text-3xl font-bold text-center text-green-700 mb-8">

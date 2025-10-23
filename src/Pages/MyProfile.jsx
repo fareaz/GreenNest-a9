@@ -3,14 +3,13 @@ import UserLogo from "../assets/user.png";
 import { AuthContext } from "../Contexts/AuthContext";
 import { toast } from "react-toastify";
 import { auth } from "../FireBase/fireBase.init";
+import Loading from "../Components/Loading";
 
 const MyProfile = () => {
-  const { user, setUser, updateUser, refreshUser } = useContext(AuthContext);
-
+  const { user, setUser, updateUser, loading, refreshUser } = useContext(AuthContext);
   const [name, setName] = useState("");
   const [photo, setPhoto] = useState("");
-
-
+  
   useEffect(() => {
     setName("");
     setPhoto("");
@@ -40,6 +39,7 @@ const MyProfile = () => {
         toast.error(error?.message );
       });
   };
+  if (loading) return <Loading />;
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">

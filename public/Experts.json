@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Sophia Green",
+    "specialization": "Indoor Plant Specialist",
+    "image": "https://i.ibb.co.com/ZzmFhJ60/images-4.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Liam Wood",
+    "specialization": "Soil & Nutrition Expert",
+    "image": "https://i.ibb.co.com/zT8DPsqc/images-7.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Ava Leaf",
+    "specialization": "Propagation Specialist",
+    "image": "https://i.ibb.co.com/3YpFFppD/images-6.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Noah Bloom",
+    "specialization": "Pest Control Advisor",
+    "image": "https://i.ibb.co.com/YFB1dcHn/images-5.jpg"
+  }
+]
