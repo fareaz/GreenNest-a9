@@ -10,18 +10,14 @@ import {
   updateProfile,
 } from "firebase/auth";
 
-import React, {  useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { auth } from "../FireBase/fireBase.init";
 import { AuthContext } from "./AuthContext";
-
-
-
-
 
 const googleProvider = new GoogleAuthProvider();
 
 const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState();
+  const [user, setUser] = useState("");
   const [loading, setLoading] = useState(true);
 
   const signInWithGoogle = () => {
@@ -42,20 +38,21 @@ const AuthProvider = ({ children }) => {
   const updateUser = (updatedData) => {
     return updateProfile(auth.currentUser, updatedData);
   };
-  const Verification = () => {
+   const forgetPassword = (email) => {
     setLoading(true);
-    return sendEmailVerification(auth.currentUser);
+    return sendPasswordResetEmail(auth, email)
   };
-  const sendPassResetEmail = (email) => {
-    setLoading(true);
-    return sendPasswordResetEmail(auth, email);
-  };
+  const emailVerification = ()=>{
+      setLoading(false);
+    return sendEmailVerification(auth.currentUser)
+
+  }
   const refreshUser = () => {
-  if (!auth.currentUser) return Promise.resolve();
-  return auth.currentUser.reload().then(() => {
-    setUser({ ...auth.currentUser });
-  });
-};
+    if (!auth.currentUser) return Promise.resolve();
+    return auth.currentUser.reload().then(() => {
+      setUser({ ...auth.currentUser });
+    });
+  };
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -76,9 +73,9 @@ const AuthProvider = ({ children }) => {
     setLoading,
     updateUser,
     signInWithGoogle,
-   Verification,
-    sendPassResetEmail,
-    refreshUser
+    forgetPassword,
+    refreshUser,
+    emailVerification
   };
 
   return (

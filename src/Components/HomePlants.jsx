@@ -27,7 +27,7 @@ const HomePlants = () => {
       <div className="text-right mt-3 mr-3">
         <Link
           to="/plants"
-          className="inline-block text-green-500 font-semibold hover:text-green-900"
+          className="inline-block text-green-700 font-semibold hover:text-green-900"
         >
           See All
         </Link>

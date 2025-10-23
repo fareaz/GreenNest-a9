@@ -69,7 +69,7 @@ const PlantDetails = () => {
         
         
         <div className="relative w-full overflow-hidden rounded-xl">
-  {/* ✅ Back Button - top left */}
+  
   <button
     onClick={() => navigate(-1)}
     className="absolute top-4 left-4 bg-gradient-to-r from-[#16A34A] to-[#4ADE80] 

@@ -2,44 +2,48 @@ import { useContext, useEffect, useState } from "react";
 import UserLogo from "../assets/user.png";
 import { AuthContext } from "../Contexts/AuthContext";
 import { toast } from "react-toastify";
-import { auth } from "../FireBase/fireBase.init"; // যদি দরকার হয় reload-এর জন্য
+import { auth } from "../FireBase/fireBase.init";
 
 const MyProfile = () => {
   const { user, setUser, updateUser, refreshUser } = useContext(AuthContext);
 
-  
   const [name, setName] = useState("");
-  const [photo, setPhoto] = useState( "");
+  const [photo, setPhoto] = useState("");
+
 
   useEffect(() => {
-    setName(user?.displayName || "");
-    setPhoto(user?.photoURL || "");
+    setName("");
+    setPhoto("");
   }, [user]);
 
-  const handleUpdate = () => {
+  const handleUpdate = (e) => {
+    e.preventDefault();
+
     if (!user) return toast.error("No user logged in");
 
     updateUser({
-      displayName: name,
-      photoURL: photo,
+      displayName: name || user.displayName, 
+      photoURL: photo || user.photoURL,
     })
       .then(() => (refreshUser ? refreshUser() : auth.currentUser?.reload()))
       .then(() => {
-        
         if (!refreshUser && auth.currentUser) {
           setUser({ ...auth.currentUser });
         }
-        toast.success("Profile updated successfully");
+        toast.success("Profile updated successfully ");
+        
+        setName("");
+        setPhoto("");
       })
       .catch((error) => {
         console.error(error);
-        toast.error(error?.message || "Error updating profile");
+        toast.error(error?.message );
       });
   };
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <div className="border border-emerald-200 bg-emerald-50/50 shadow-lg rounded-2xl p-8 w-10/12 md:flex justify-between">
+      <div className="border border-emerald-200 bg-emerald-50/70 shadow-lg rounded-2xl p-8 w-10/12 md:flex justify-between">
         <div className="flex flex-col items-center">
           <img
             src={user?.photoURL || UserLogo}  

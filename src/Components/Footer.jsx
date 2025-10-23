@@ -12,7 +12,7 @@ const Footer = () => {
             <li>
               <Link
                 
-                className="hover:underline hover:text-green-200 transition-all"
+                className="hover:underline hover:text-green-200 "
               >
                 About
               </Link>
@@ -20,7 +20,7 @@ const Footer = () => {
             <li>
               <Link
                 
-                className="hover:underline hover:text-green-200 transition-all"
+                className="hover:underline hover:text-green-200 "
               >
                 Contact
               </Link>
@@ -28,7 +28,7 @@ const Footer = () => {
             <li>
               <Link
                 
-                className="hover:underline hover:text-green-200 transition-all"
+                className="hover:underline hover:text-green-200 "
               >
                 Privacy Policy
               </Link>
@@ -42,7 +42,7 @@ const Footer = () => {
             href="https://instagram.com"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-green-200 transition-transform transform hover:scale-110"
+            className="hover:text-green-200  hover:scale-110"
           >
             <FaInstagram />
           </a>
@@ -50,7 +50,7 @@ const Footer = () => {
             href="https://facebook.com"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-green-200 transition-transform transform hover:scale-110"
+            className="hover:text-green-200 hover:scale-110"
           >
             <FaFacebookF />
           </a>
@@ -58,7 +58,7 @@ const Footer = () => {
             href="https://pinterest.com"
             target="_blank"
             rel="noreferrer"
-            className="hover:text-green-200 transition-transform transform hover:scale-110"
+            className="hover:text-green-200  hover:scale-110"
           >
             <FaPinterestP />
           </a>
@@ -66,7 +66,7 @@ const Footer = () => {
       </div>
       <div className="max-w-11/12 mx-auto border-t border-green-400  my-6"></div>
       <p className="text-center text-sm text-green-100">
-        © 2025 <span className="font-semibold">GreenNest</span>. All rights reserved.
+          &copy; 2025 <span className="font-semibold">GreenNest</span>. All rights reserved.
       </p>
     </footer>
   );

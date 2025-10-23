@@ -10,6 +10,7 @@ import AuthLayout from "../layOuts/AuthLayout";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import PlantDetails from "../Pages/Plantdetails";
+import PrivateRouts from "../Private/Privaterouts";
 
 
 export const router = createBrowserRouter([
@@ -52,9 +53,10 @@ export const router = createBrowserRouter([
   },
   {
     path: "/plant_details/:id",
-    element: <PlantDetails />,
-    // If you decide to use the loader, then switch PlantDetails to useLoaderData
-    // loader: () => fetch("/plant.json"),
+    element:<PrivateRouts>
+        <PlantDetails />
+    </PrivateRouts> ,
+    
   },
   {
      path: "/*",
