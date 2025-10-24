@@ -8,5 +8,5 @@
   font-family: "Poppins", sans-serif;
 }
 a.active {
-  @apply underline;
+  @apply text-emerald-900 underline;
 }

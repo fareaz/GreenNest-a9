@@ -10,7 +10,7 @@ const HomePlants = () => {
     fetch("/plant.json")
       .then((result) => result.json())
       .then((data) => setPlants(data))
-      .catch((err) => console.error("Error loading JSON:", err));
+      .catch((error) => console.log(error));
   }, []);
 
   return (

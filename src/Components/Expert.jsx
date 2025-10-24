@@ -5,7 +5,7 @@ const Expert = () => {
     fetch("/Experts.json") 
       .then((result) => result.json())
       .then((data) => setExperts(data))
-      .catch((error) => console.error(error));
+      .catch((error) => console.log(error));
   }, []);
 return (
 <section className="w-11/12 mx-auto py-10">

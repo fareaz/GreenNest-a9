@@ -7,7 +7,7 @@ const PlantCare = () => {
     fetch("/care.json")
       .then((res) => res.json())
       .then((data) => setCareData(data))
-      .catch((error) => console.error("Error loading care data:", error));
+      .catch((error) => console.log(error));
   }, []);
 
   return (

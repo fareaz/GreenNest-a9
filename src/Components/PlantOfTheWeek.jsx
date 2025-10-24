@@ -14,7 +14,7 @@ function PlantOfTheWeek() {
         setLoading(false);
       })
       .catch((error) => {
-        console.log("Error loading data:", error);
+        console.log( error);
         setLoading(false);
       });
   }, []);

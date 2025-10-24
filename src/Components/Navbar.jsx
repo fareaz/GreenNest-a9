@@ -43,7 +43,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1000] mt-3 w-52 p-2 shadow absolute"
+            className="menu menu-sm dropdown-content bg-green-50 rounded-box z-[1000] mt-3 w-52 p-2 shadow absolute space-y-1 "
           >
             {links}
           </ul>
@@ -51,7 +51,7 @@ const Navbar = () => {
 
         <Link
           to="/"
-          className="bg-gradient-to-r from-[#16A34A] to-[#4ADE80] text-transparent bg-clip-text text-2xl font-bold"
+          className="bg-gradient-to-r from-[#16A34A] to-[#4ADE80] text-transparent bg-clip-text text-xl md:text-2xl font-bold"
         >
           GREEN NEST
         </Link>
