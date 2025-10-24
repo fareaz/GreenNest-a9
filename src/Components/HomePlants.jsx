@@ -8,7 +8,7 @@ const HomePlants = () => {
 
   useEffect(() => {
     fetch("/plant.json")
-      .then((res) => res.json())
+      .then((result) => result.json())
       .then((data) => setPlants(data))
       .catch((err) => console.error("Error loading JSON:", err));
   }, []);

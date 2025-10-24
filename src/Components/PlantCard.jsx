@@ -18,7 +18,6 @@ const PlantCard = ({p}) => {
               src={p.image}
               alt={p.plantName}
               className="w-full h-48 object-cover rounded-lg"
-              loading="lazy"
             />
 
             <h3 className="text-lg font-bold mt-3 text-emerald-900">

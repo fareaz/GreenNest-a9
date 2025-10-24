@@ -4,6 +4,7 @@ import Plants from '../Components/HomePlants';
 import Expert from '../Components/Expert';
 import PlantOfTheWeek from '../Components/PlantOfTheWeek';
 import Loading from '../Components/Loading';
+import PlantCare from '../Components/PlantCare';
 
 
 const HomePage = () => {
@@ -11,7 +12,7 @@ const HomePage = () => {
 
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 1000);
+    const timer = setTimeout(() => setLoading(false), 800);
     return () => clearTimeout(timer);
   }, []);
 
@@ -21,7 +22,9 @@ const HomePage = () => {
     return (
         <div>
            <Hero></Hero>
+           
            <Plants></Plants>
+           <PlantCare></PlantCare>
            <PlantOfTheWeek></PlantOfTheWeek>
            <Expert></Expert>  
         </div>

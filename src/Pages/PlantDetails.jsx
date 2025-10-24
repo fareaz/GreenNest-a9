@@ -15,10 +15,10 @@ const PlantDetails = () => {
   useEffect(() => {
     setLoading(true);
     fetch("/plant.json")
-      .then((res) => res.json())
+      .then((result) => result.json())
       .then((data) => {
         const selected = data.find(
-          (item) => String(item.plantId) === String(id)
+          (item) => item.plantId == id
         );
         setPlant(selected || null);
       })

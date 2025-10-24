@@ -1,0 +1,25 @@
+[
+  {
+    "plantId": 1,
+    "plantName": "Aloe Vera",
+    
+    "watering": "Water every 2–3 weeks, allowing the soil to dry out completely between waterings.",
+    "sunlight": "Place in bright, indirect sunlight. Tolerates some direct light.",
+    "fertilizing": "Feed once every 2 months in spring and summer using a balanced liquid fertilizer."
+  },
+  {
+    "plantId": 2,
+    "plantName": "Peace Lily",
+   
+    "watering": "Keep the soil moist but not soggy. Water once the top inch of soil feels dry.",
+    "sunlight": "Prefers medium to low indirect light. Avoid direct sunlight.",
+    "fertilizing": "Fertilize every 6 weeks during the growing season with a houseplant fertilizer."
+  },
+  {
+    "plantId": 3,
+    "plantName": "Snake Plant",
+    "watering": "Water lightly every 3–4 weeks. Let the soil dry fully before watering again.",
+    "sunlight": "Thrives in low to bright, indirect light. Very tolerant of shade.",
+    "fertilizing": "Feed with cactus or succulent fertilizer once every 2–3 months during spring and summer."
+  }
+]

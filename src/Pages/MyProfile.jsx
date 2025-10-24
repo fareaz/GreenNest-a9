@@ -6,48 +6,52 @@ import { auth } from "../FireBase/fireBase.init";
 import Loading from "../Components/Loading";
 
 const MyProfile = () => {
-  const { user, setUser, updateUser, loading, refreshUser } = useContext(AuthContext);
+  const { user, setUser, updateUser, loading,setLoading, refreshUser } = useContext(AuthContext);
   const [name, setName] = useState("");
   const [photo, setPhoto] = useState("");
-  
   useEffect(() => {
     setName("");
     setPhoto("");
   }, [user]);
 
   const handleUpdate = (e) => {
-    e.preventDefault();
+  e.preventDefault();
+  if (!user) return toast.error("No user logged in");
+  const hasName = !!(name && name);
+  const hasPhoto = !!(photo && photo.trim());
 
-    if (!user) return toast.error("No user logged in");
+  if (!hasName && !hasPhoto) return;
 
-    updateUser({
-      displayName: name || user.displayName, 
-      photoURL: photo || user.photoURL,
+  setLoading(true); 
+
+  updateUser({
+    displayName: hasName ? name : user.displayName,
+    photoURL: hasPhoto ? photo : user.photoURL,
+  })
+    .then(() => (refreshUser ? refreshUser() : auth.currentUser?.reload()))
+    .then(() => {
+      if (!refreshUser && auth.currentUser) {
+        setUser({ ...auth.currentUser });
+      }
+      toast.success("Profile updated successfully");
+      setName("");
+      setPhoto("");
     })
-      .then(() => (refreshUser ? refreshUser() : auth.currentUser?.reload()))
-      .then(() => {
-        if (!refreshUser && auth.currentUser) {
-          setUser({ ...auth.currentUser });
-        }
-        toast.success("Profile updated successfully ");
-        
-        setName("");
-        setPhoto("");
-      })
-      .catch((error) => {
-        console.error(error);
-        toast.error(error?.message );
-      });
-  };
-  if (loading) return <Loading />;
-
+    .catch(() => {
+      toast.error("Failed to update profile.");
+    })
+    .finally(() => {
+      setLoading(false);
+    });
+};
+if (loading) return <Loading />;
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
       <div className="border border-emerald-200 bg-emerald-50/70 shadow-lg rounded-2xl p-8 w-10/12 md:flex justify-between">
         <div className="flex flex-col items-center">
           <img
             src={user?.photoURL || UserLogo}  
-            alt="User avatar"
+            alt=""
             className="w-24 h-24 rounded-full mb-4 border-2 border-green-500 object-cover"
           />
           <h2 className="text-2xl font-semibold text-gray-800 mb-1">
@@ -64,6 +68,7 @@ const MyProfile = () => {
           <input
             type="text"
             value={name}
+            
             onChange={(e) => setName(e.target.value)}
             placeholder="Update Name"
             className="mb-3 w-full rounded-lg border border-emerald-200 px-3 py-2 outline-none focus:ring-2 focus:ring-emerald-400 text-gray-700"
@@ -72,6 +77,7 @@ const MyProfile = () => {
           <input
             type="text"
             value={photo}
+          
             onChange={(e) => setPhoto(e.target.value)}
             placeholder="Update Photo URL"
             className="mb-3 w-full rounded-lg border border-emerald-200 px-3 py-2 outline-none focus:ring-2 focus:ring-emerald-400 text-gray-700"
