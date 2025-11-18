@@ -140,7 +140,7 @@ Includes:
 ## 🚀 Running The Project Locally  
 
 ```bash
-git clone <your-repo-link>
+git clone https://github.com/fareaz/GreenNest-a9.git
 cd GreenNest
 npm install
 npm run dev
