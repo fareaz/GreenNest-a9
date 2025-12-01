@@ -1,5 +1,5 @@
 # 🍃 GreenNest – Indoor Plant Care & Store  
-### 🌐 **Live Website:** https://green-nest-fc2b6.web.app/  
+### 🌐 **Live Website:** [https://green-nest-fc2b6.web.app/](https://glittery-kataifi-438a4e.netlify.app/)  
 
 ---
 
